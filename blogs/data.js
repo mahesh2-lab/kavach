@@ -323,7 +323,7 @@ const blogData = [
   }
 ];
 
-// If we are in a module environment (not needed for simple script tag inclusion, but good practice)
+
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = blogData;
 }
