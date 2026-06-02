@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog / Resources | Kavach Fire Safety Industrial Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+  .page-header {
+    background: var(--navy);
+    padding: 140px 48px 60px;
+    text-align: center;
+    color: var(--white);
+  }
+  .page-title {
+    font-family: var(--font-display);
+    font-size: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+  .breadcrumb {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .breadcrumb a {
+    color: var(--red);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .blog-card {
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  }
+  .blog-card-category {
+    background: rgba(13,27,42,0.1);
+    color: var(--navy);
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    display: inline-block;
+    width: fit-content;
+    margin-bottom: 12px;
+  }
+  .blog-card-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: var(--navy);
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+  .blog-card-excerpt {
+    font-size: 14px;
+    color: var(--charcoal);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex-grow: 1;
+  }
+  .blog-card-link {
+    color: var(--red);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--red);
+    display: inline-block;
+    width: fit-content;
+    padding-bottom: 2px;
+  }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<kavach-header base="../"></kavach-header>
+
+<div class="page-header reveal">
+  <h1 class="page-title">Blog / Resources</h1>
+  <div class="breadcrumb"><a href="../index.html">Home</a> / Blog</div>
+</div>
+
+<section class="container" style="padding-top:60px;">
+  <div style="text-align: center; margin-bottom: 60px;" class="reveal">
+    <span class="section-label">Industrial Safety Resources</span>
+    <h2 class="section-title">Fire Safety <em>Insights</em></h2>
+    <p style="font-size:18px; line-height:1.7; color: var(--charcoal); max-width: 900px; margin: 0 auto;">Stay informed on the latest developments in industrial fire protection engineering, statutory compliance updates, and facility maintenance best practices. Our engineering team regularly publishes technical resources to help facility managers maintain a safe, legally compliant operating environment.</p>
+  </div>
+
+  <div id="blog-grid" class="responsive-grid grid-3" style="margin-bottom: 80px;">
+    <!-- Blog cards will be injected here via JavaScript -->
+  </div>
+
+  <div style="background: var(--navy); border-radius: 8px; padding: 48px; text-align:center; color: var(--white); margin-bottom: 80px;" class="reveal">
+    <h3 style="font-family:var(--font-display); font-size:28px; text-transform:uppercase; margin-bottom:16px; letter-spacing: 1px;">Join Our Safety Mailing List</h3>
+    <p style="font-size:16px; color:rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto;">Get the latest regulatory updates and engineering insights delivered directly to your inbox. No spam, just technical expertise.</p>
+    <form style="display: flex; justify-content: center; gap: 16px; max-width: 500px; margin: 0 auto;">
+      <input type="email" placeholder="Enter your work email" style="padding: 16px; border-radius: 4px; border: none; flex-grow: 1; font-family: var(--font-body); font-size: 14px;" required>
+      <button type="submit" class="btn-primary" style="background: var(--red); color: var(--white); padding: 16px 32px; border: none; cursor: pointer;">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<kavach-footer base="../"></kavach-footer>
+<script src="../js/components.js"></script>
+<script src="../js/main.js"></script>
+
+<!-- Load Blog Data and Render Grid -->
+<script src="data.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const grid = document.getElementById("blog-grid");
+    
+    if (typeof blogData !== 'undefined' && grid) {
+      grid.innerHTML = blogData.map(blog => `
+        <div class="blog-card reveal visible">
+          <span class="blog-card-category">${blog.category}</span>
+          <h3 class="blog-card-title">${blog.title}</h3>
+          <p class="blog-card-excerpt">${blog.excerpt}</p>
+          <a href="post.html?id=${blog.id}" class="blog-card-link">Read Full Article <i class="fa-solid fa-arrow-right" style="margin-left: 4px;"></i></a>
+        </div>
+      `).join('');
+    }
+  });
+</script>
+
+</body>
+</html>
