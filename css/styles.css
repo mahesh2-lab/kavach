@@ -193,16 +193,15 @@ nav {
 .hamburger span {
   display: block;
   width: 100%;
-  min-height: 3px;
   height: 3px;
   background: var(--navy);
-  border-radius: 10px;
-  transition: all 0.3s linear;
-  transform-origin: 1px;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
 }
 
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -210,7 +209,7 @@ nav {
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 
@@ -1313,25 +1312,6 @@ footer {
 .footer-bottom span {
   color: var(--red);
 }
-
-
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-}
-
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--navy);
-  margin: 5px 0;
-  transition: 0.3s;
-}
-
 
 .reveal {
   opacity: 0;
