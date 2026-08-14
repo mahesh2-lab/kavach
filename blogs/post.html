@@ -1,184 +1,29 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog Post | Kavach Fire Safety</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&amp;family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/styles.css">
-<style>
-  .blog-hero {
-    background: var(--navy);
-    padding: 140px 48px 60px;
-    color: var(--white);
-    text-align: center;
-  }
-  .blog-meta {
-    font-size: 14px;
-    color: rgba(255,255,255,0.7);
-    margin-bottom: 24px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  .blog-meta span {
-    color: var(--red);
-    font-weight: 700;
-  }
-  .blog-title {
-    font-family: var(--font-display);
-    font-size: 42px;
-    font-weight: 800;
-    max-width: 900px;
-    margin: 0 auto;
-    line-height: 1.2;
-  }
-  .blog-content-wrapper {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 0 24px;
-    font-size: 18px;
-    line-height: 1.8;
-    color: var(--charcoal);
-  }
-  .blog-content-wrapper h2 {
-    font-family: var(--font-display);
-    font-size: 32px;
-    color: var(--navy);
-    margin: 40px 0 24px;
-  }
-  .blog-content-wrapper p {
-    margin-bottom: 24px;
-  }
-  .blog-content-wrapper ul {
-    margin-bottom: 24px;
-    padding-left: 24px;
-  }
-  .blog-content-wrapper li {
-    margin-bottom: 12px;
-  }
-  .blog-author {
-    margin-top: 60px;
-    padding-top: 40px;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    gap: 24px;
-  }
-  .author-img {
-    width: 64px;
-    height: 64px;
-    background: var(--red);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 24px;
-    font-weight: 700;
-  }
-  #error-msg {
-    text-align: center;
-    padding: 100px;
-    font-size: 24px;
-    color: var(--red);
-    display: none;
-  }
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<link rel="canonical" href="https://kavach-industrials.vercel.app/blogs/post.html">
-<link rel="preload" href="../css/styles.css" as="style">
-<meta name="theme-color" content="#f42223">
-<meta name="description" content="India's Trusted Fire Safety Engineering Partner providing top-rated fire safety solutions, audits, and AMC services for industrial compliance.">
-<meta property="og:url" content="https://kavach-industrials.vercel.app/blogs/post.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Kavach Fire Safety Industrial Services">
-<meta name="application-name" content="Kavach Fire Safety Industrial Services">
-<meta name="apple-mobile-web-app-title" content="Kavach Fire Safety">
-<meta property="og:title" content="Blog Post | Kavach Fire Safety">
-<meta property="og:description" content="India's Trusted Fire Safety Engineering Partner providing top-rated fire safety solutions, audits, and AMC services for industrial compliance.">
-<meta name="twitter:title" content="Blog Post | Kavach Fire Safety">
-<meta name="twitter:description" content="India's Trusted Fire Safety Engineering Partner providing top-rated fire safety solutions, audits, and AMC services for industrial compliance.">
-<meta property="og:image" content="https://kavach-industrials.vercel.app/assets/images/about-us.jpg">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://kavach-industrials.vercel.app"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Blog Post",
-      "item": "https://kavach-industrials.vercel.app/blogs/post.html"
-    }
-  ]
-}
-</script>
-<meta name="author" content="Kavach Fire Safety Industrial Services">
-<meta name="publisher" content="Kavach Fire Safety Industrial Services">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
-<link rel="icon" type="image/png" href="../assets/images/logo.png">
-<link rel="apple-touch-icon" href="../assets/images/logo.png">
-  <meta name="google-site-verification" content="T_H5RPV1DsTjod8HdQs7iJELtpm79u1HhkSLyjuwbrE" />
-</head>
-<body>
-
-<kavach-header base="../"></kavach-header>
-
-<div id="blog-header" class="blog-hero" style="display: none;">
-  <div class="blog-meta">Category: <span id="meta-category"></span> &nbsp;|&nbsp; Published: <span id="meta-date"></span></div>
-  <h1 id="post-title" class="blog-title"></h1>
-</div>
-
-<div id="error-msg">Blog post not found. <a href="index.html" style="color:var(--navy); text-decoration: underline;">Return to blogs</a></div>
-
-<article id="blog-article" class="blog-content-wrapper reveal visible" style="display: none;">
-  <div id="post-content"></div>
-
-  <div class="blog-author">
-    <div class="author-img"><i class="fa-solid fa-user-shield"></i></div>
-    <div>
-      <h4 id="author-name" style="color:var(--navy); font-family:var(--font-display); font-size:20px; margin-bottom:4px;"></h4>
-      <p id="author-role" style="font-size:14px; margin:0; color:var(--charcoal);"></p>
-    </div>
-  </div>
-</article>
-
-<kavach-footer base="../"></kavach-footer>
-<script src="../js/components.js"></script>
-<script src="../js/main.js"></script>
-
-
-<script src="data.js"></script>
+<title>Blog Archives & Technical Articles | Kavach</title>
+<meta name="robots" content="noindex, follow">
+<meta http-equiv="refresh" content="0; url=index.html">
+<link rel="canonical" href="https://kavach-industrials.vercel.app/blogs/index.html">
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
+  (function() {
     const params = new URLSearchParams(window.location.search);
     const blogId = params.get('id');
-    
-    const blog = typeof blogData !== 'undefined' ? blogData.find(b => b.id === blogId) : null;
-    
-    if (blog) {
-      document.title = blog.title + " | Kavach Fire Safety";
-      document.getElementById('meta-category').textContent = blog.category;
-      document.getElementById('meta-date').textContent = blog.date;
-      document.getElementById('post-title').textContent = blog.title;
-      document.getElementById('post-content').innerHTML = blog.content;
-      document.getElementById('author-name').textContent = blog.author;
-      document.getElementById('author-role').textContent = blog.role;
-      
-      document.getElementById('blog-header').style.display = 'block';
-      document.getElementById('blog-article').style.display = 'block';
+    if (blogId) {
+      window.location.replace(blogId + '.html');
     } else {
-      document.getElementById('error-msg').style.display = 'block';
+      window.location.replace('index.html');
     }
-  });
+  })();
 </script>
-
-
-
+</head>
+<body style="font-family: sans-serif; text-align: center; padding: 60px 20px;">
+  <noscript>
+    <nav style="background:#0d1b2a; padding:12px 24px; text-align:center;">
+      <a href="../index.html" style="color:#fff; margin:0 12px; text-decoration:none; font-weight:600;">Home</a>
+      <a href="index.html" style="color:#f42223; margin:0 12px; text-decoration:none; font-weight:600;">Blog</a>
+    </nav>
+  </noscript>
+  <h2>Redirecting to Kavach Fire Safety Knowledge Hub...</h2>
+  <p><a href="index.html">Click here if you are not redirected automatically.</a></p>
 </body></html>

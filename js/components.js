@@ -39,6 +39,7 @@ class KavachHeader extends HTMLElement {
 class KavachFooter extends HTMLElement {
   connectedCallback() {
     const base = this.getAttribute('base') || './';
+    const currentYear = new Date().getFullYear();
     this.innerHTML = `
       <footer>
         <div class="footer-grid">
@@ -51,6 +52,11 @@ class KavachFooter extends HTMLElement {
               </div>
             </a>
             <p>Pune's trusted partner for industrial fire protection, safety compliance, and life safety systems. Certified engineers. Proven systems. Guaranteed compliance.</p>
+            <p style="font-size: 13px; color: var(--ash); margin-top: 12px; line-height: 1.5;">
+              <i class="fa-solid fa-location-dot" style="color:var(--red); margin-right:6px;"></i> Jategaon Bk, Taluka: Shirur, District: Pune, Maharashtra 412208<br>
+              <i class="fa-solid fa-phone" style="color:var(--red); margin-right:6px;"></i> <a href="tel:+918888251522" style="color:inherit; text-decoration:none;">+91 8888251522</a> | 
+              <i class="fa-solid fa-envelope" style="color:var(--red); margin-right:6px;"></i> <a href="mailto:projects@kavachfire.in" style="color:inherit; text-decoration:none;">projects@kavachfire.in</a>
+            </p>
           </div>
           <div class="footer-col">
             <h5>Services</h5>
@@ -85,7 +91,7 @@ class KavachFooter extends HTMLElement {
           </div>
         </div>
         <div class="footer-bottom">
-          <p>© 2024 Kavach Fire Safety Industrial Services, Pune. All rights reserved.</p>
+          <p>© ${currentYear} Kavach Fire Safety Industrial Services, Pune. All rights reserved.</p>
           <p>Built with <span>♥</span> for industrial safety</p>
         </div>
       </footer>

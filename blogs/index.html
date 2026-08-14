@@ -1,7 +1,9 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog / Resources | Kavach Fire Safety Industrial Services</title>
+<title>Industrial Fire Safety Blog & Technical Guides | Kavach</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&amp;family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css">
 <style>
@@ -88,17 +90,18 @@
 <link rel="canonical" href="https://kavach-industrials.vercel.app/blogs/index.html">
 <link rel="preload" href="../css/styles.css" as="style">
 <meta name="theme-color" content="#f42223">
-<meta name="description" content="India's Trusted Fire Safety Engineering Partner providing top-rated fire safety solutions, audits, and AMC services for industrial compliance.">
+<meta name="description" content="Expert technical guides on industrial fire sprinkler maintenance, jockey pumps, fire safety audits, FACP systems, and statutory NBC compliance.">
 <meta property="og:url" content="https://kavach-industrials.vercel.app/blogs/index.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kavach Fire Safety Industrial Services">
 <meta name="application-name" content="Kavach Fire Safety Industrial Services">
 <meta name="apple-mobile-web-app-title" content="Kavach Fire Safety">
-<meta property="og:title" content="Blog / Resources | Kavach Fire Safety Industrial Services">
-<meta property="og:description" content="India's Trusted Fire Safety Engineering Partner providing top-rated fire safety solutions, audits, and AMC services for industrial compliance.">
-<meta name="twitter:title" content="Blog / Resources | Kavach Fire Safety Industrial Services">
-<meta name="twitter:description" content="India's Trusted Fire Safety Engineering Partner providing top-rated fire safety solutions, audits, and AMC services for industrial compliance.">
-<meta property="og:image" content="https://kavach-industrials.vercel.app/assets/images/about-us.jpg">
+<meta property="og:title" content="Industrial Fire Safety Blog & Technical Guides | Kavach">
+<meta property="og:description" content="Expert technical guides on industrial fire sprinkler maintenance, jockey pumps, fire safety audits, FACP systems, and statutory NBC compliance.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Industrial Fire Safety Blog & Technical Guides | Kavach">
+<meta name="twitter:description" content="Expert technical guides on industrial fire sprinkler maintenance, jockey pumps, fire safety audits, FACP systems, and statutory NBC compliance.">
+<meta property="og:image" content="https://kavach-industrials.vercel.app/assets/images/blog.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -128,6 +131,18 @@
   <meta name="google-site-verification" content="T_H5RPV1DsTjod8HdQs7iJELtpm79u1HhkSLyjuwbrE" />
 </head>
 <body>
+
+<noscript>
+  <nav style="background:#0d1b2a; padding:12px 24px; text-align:center;">
+    <a href="../index.html" style="color:#fff; margin:0 12px; text-decoration:none; font-weight:600;">Home</a>
+    <a href="../pages/about.html" style="color:#fff; margin:0 12px; text-decoration:none; font-weight:600;">About Us</a>
+    <a href="../pages/services.html" style="color:#fff; margin:0 12px; text-decoration:none; font-weight:600;">Services</a>
+    <a href="../pages/projects.html" style="color:#fff; margin:0 12px; text-decoration:none; font-weight:600;">Projects</a>
+    <a href="index.html" style="color:#f42223; margin:0 12px; text-decoration:none; font-weight:600;">Blog</a>
+    <a href="../pages/contact.html" style="color:#fff; margin:0 12px; text-decoration:none; font-weight:600;">Contact Us</a>
+    <a href="../pages/request-inspection.html" style="color:#fff; margin:0 12px; text-decoration:none; font-weight:600;">Get a Quote</a>
+  </nav>
+</noscript>
 
 <kavach-header base="../"></kavach-header>
 
@@ -173,7 +188,7 @@
           <span class="blog-card-category">${blog.category}</span>
           <h3 class="blog-card-title">${blog.title}</h3>
           <p class="blog-card-excerpt">${blog.excerpt}</p>
-          <a href="post.html?id=${blog.id}" class="blog-card-link">Read Full Article <i class="fa-solid fa-arrow-right" style="margin-left: 4px;"></i></a>
+          <a href="${blog.id}.html" class="blog-card-link">Read Full Article <i class="fa-solid fa-arrow-right" style="margin-left: 4px;"></i></a>
         </div>
       `).join('');
     }
