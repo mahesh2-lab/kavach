@@ -29,7 +29,7 @@ const locations = [
     name: 'Ranjangaon MIDC',
     region: 'Shirur Industrial Corridor',
     title: 'Fire Protection Engineering Ranjangaon MIDC | Kavach',
-    meta: 'Certified turnkey industrial fire protection, clean agent suppression, and pump house maintenance for electronics, FMCG, and automotive plants in Ranjangaon MIDC.',
+    meta: 'Certified Turnkey industrial fire protection, clean agent suppression, and pump house maintenance for electronics, FMCG, and automotive plants in Ranjangaon MIDC.',
     h1: 'Industrial Fire Protection Engineering in Ranjangaon MIDC',
     sectors: 'Consumer Electronics, Home Appliances, FMCG Manufacturing, Global Tier-1 Automotive, Large-Scale Warehouses',
     sla: 'Immediate Proximity Dispatch: Under 45-Minute Emergency Response in Ranjangaon MIDC',

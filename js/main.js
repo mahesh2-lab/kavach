@@ -13,6 +13,36 @@ const initializeReveals = () => {
       el.style.transitionDelay = `${index * 100}ms`;
     });
   });
+
+  // Observe FAQ items for staggered entrance
+  const faqObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        faqObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.faq-item').forEach((el, index) => {
+    el.style.transitionDelay = `${index * 55}ms`;
+    faqObserver.observe(el);
+  });
+
+  // Observe related cards for staggered entrance
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        cardObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.related-card').forEach((el, index) => {
+    el.style.transitionDelay = `${index * 80}ms`;
+    cardObserver.observe(el);
+  });
 };
 
 const submitForm = () => {
@@ -64,7 +94,24 @@ const initializeNavigation = () => {
   }
 };
 
+const initializeScrollBar = () => {
+  const bar = document.createElement('div');
+  bar.id = 'kavach-scroll-bar';
+  document.body.prepend(bar);
+
+  const update = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+    bar.style.setProperty('--scroll-progress', progress.toFixed(4));
+  };
+
+  window.addEventListener('scroll', update, { passive: true });
+  update(); // initialise at current position
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   initializeReveals();
   initializeNavigation();
-});
+  initializeScrollBar();
+});

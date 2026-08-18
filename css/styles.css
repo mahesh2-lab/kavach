@@ -1,3 +1,6 @@
+@import url('./fonts.css');
+@import url('./animations.css');
+
 :root {
   --red: #f42223;
   --red-dark: #c41a1a;
@@ -53,7 +56,6 @@ nav {
   padding: 0 48px;
   height: 72px;
   background: rgba(255, 255, 255, 0.97);
-  border-bottom: 2px solid var(--red);
   backdrop-filter: blur(8px);
 }
 
@@ -218,7 +220,8 @@ nav {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 72px;
+  padding-top: 130px;
+  padding-bottom: 70px;
   overflow: hidden;
   background: var(--white);
 }
@@ -226,7 +229,7 @@ nav {
 .hero-bg {
   position: absolute;
   inset: -5%;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.75) 45%, rgba(255, 255, 255, 0) 100%), url('../assets/images/hero-bg.jpg') center/cover no-repeat;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.75) 45%, rgba(255, 255, 255, 0) 100%), url('../assets/images/hero-bg.webp') center/cover no-repeat;
   z-index: 0;
   animation: heroBgKenBurns 25s ease-in-out infinite alternate;
 }
@@ -323,7 +326,7 @@ nav {
   z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 32px 48px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -342,6 +345,7 @@ nav {
   text-transform: uppercase;
   padding: 8px 16px;
   border-radius: 2px;
+  margin-top: 8px;
   margin-bottom: 24px;
   text-align: left;
   line-height: 1.4;
@@ -863,10 +867,6 @@ section {
   color: #ff6b6b;
 }
 
-.product-link::after {
-  content: '→';
-  transition: transform 0.2s;
-}
 
 .product-card:hover .product-link::after {
   transform: translateX(4px);
@@ -874,7 +874,7 @@ section {
 
 
 .compliance-strip {
-  background: linear-gradient(110deg, rgba(244, 34, 35, 0.9) 0%, rgba(196, 26, 26, 0.95) 100%), url('../assets/images/certifications.jpg') center/cover fixed no-repeat;
+  background: linear-gradient(110deg, rgba(244, 34, 35, 0.9) 0%, rgba(196, 26, 26, 0.95) 100%), url('../assets/images/certifications.webp') center/cover fixed no-repeat;
   padding: 60px 48px;
 }
 
@@ -954,7 +954,7 @@ section {
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: 19px;
+  left: -10px;
   top: 36px;
   bottom: -28px;
   width: 1px;
@@ -966,12 +966,12 @@ section {
 }
 
 .timeline-dot {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   flex-shrink: 0;
-  background: rgba(244, 34, 35, 0.15);
+  background: rgba(244, 34, 35, 0.15); 
   border: 1px solid rgba(244, 34, 35, 0.4);
-  border-radius: 2px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1093,7 +1093,7 @@ section {
 .contact-form {
   background: var(--white);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 4px;
+  border-radius: 2px;
   padding: 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
@@ -1217,7 +1217,7 @@ section {
 
 
 footer {
-  background: linear-gradient(to right, rgba(248, 249, 250, 0.92), rgba(248, 249, 250, 0.92)), url('../assets/images/footer-bg.jpg') center/cover no-repeat;
+  background: linear-gradient(to right, rgba(248, 249, 250, 0.92), rgba(248, 249, 250, 0.92)), url('../assets/images/footer-bg.webp') center/cover no-repeat;
   border-top: 2px solid var(--red);
   padding: 60px 48px 32px;
 }
@@ -1465,11 +1465,13 @@ footer {
   }
 
   #home {
-    padding-top: 96px;
+    padding-top: 110px;
+    padding-bottom: 60px;
+    min-height: auto;
   }
 
   .hero-content {
-    padding: 0 24px;
+    padding: 20px 24px;
   }
 
   .services-grid {
@@ -1651,7 +1653,7 @@ details[open] .faq-question::after {
 .related-card {
   background: var(--white);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 6px;
+  border-radius: 2px;
   padding: 24px;
   transition: all 0.2s ease;
   display: flex;
@@ -1687,4 +1689,4 @@ details[open] .faq-question::after {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-}
+}
