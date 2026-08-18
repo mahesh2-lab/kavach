@@ -14,6 +14,7 @@ class KavachHeader extends HTMLElement {
           <li><a href="${base}index.html">Home</a></li>
           <li><a href="${base}pages/about.html">About Us</a></li>
           <li><a href="${base}pages/services.html">Services</a></li>
+          <li><a href="${base}locations/index.html">Locations</a></li>
           <li><a href="${base}pages/projects.html">Projects</a></li>
           <li><a href="${base}blogs/index.html">Blog</a></li>
           <li><a href="${base}pages/contact.html">Contact Us</a></li>
@@ -74,6 +75,7 @@ class KavachFooter extends HTMLElement {
             <ul>
               <li><a href="${base}pages/about.html">About Kavach</a></li>
               <li><a href="${base}pages/about.html#story">Our Story</a></li>
+              <li><a href="${base}locations/index.html">Locations</a></li>
               <li><a href="${base}pages/projects.html">Projects</a></li>
               <li><a href="${base}blogs/index.html">Blog</a></li>
               <li><a href="${base}pages/contact.html">Contact Us</a></li>
