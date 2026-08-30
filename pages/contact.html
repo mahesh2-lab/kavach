@@ -188,18 +188,18 @@
       <p style="font-size: 14px; color: var(--ash); margin-bottom: 32px; line-height: 1.6;">Fill out the technical inquiry form below. A senior safety engineer will analyze your requirements and contact you within 24 hours.</p>
       
       <div class="form-row">
-        <div class="form-group"><label>Authorized Contact Person *</label><input type="text" placeholder="Enter your full name"></div>
-        <div class="form-group"><label>Company / Factory Name *</label><input type="text" placeholder="Enter your organization"></div>
+        <div class="form-group"><label for="contact-name">Authorized Contact Person *</label><input id="contact-name" type="text" placeholder="Enter your full name"></div>
+        <div class="form-group"><label for="company-name">Company / Factory Name *</label><input id="company-name" type="text" placeholder="Enter your organization"></div>
       </div>
       <div class="form-row">
-        <div class="form-group"><label>Official Email Address *</label><input type="email" placeholder="work@company.com"></div>
-        <div class="form-group"><label>Direct Phone / Mobile *</label><input type="tel" placeholder="+91"></div>
+        <div class="form-group"><label for="email">Official Email Address *</label><input id="email" type="email" placeholder="work@company.com"></div>
+        <div class="form-group"><label for="phone">Direct Phone / Mobile *</label><input id="phone" type="tel" placeholder="+91"></div>
       </div>
       
       <div class="form-row">
-        <div class="form-group"><label>Facility Location (City/MIDC)</label><input type="text" placeholder="e.g. Chakan, Bhosari, Hinjewadi"></div>
-        <div class="form-group"><label>Nature of Inquiry *</label>
-          <select>
+        <div class="form-group"><label for="location">Facility Location (City/MIDC)</label><input id="location" type="text" placeholder="e.g. Chakan, Bhosari, Hinjewadi"></div>
+        <div class="form-group"><label for="inquiry-type">Nature of Inquiry *</label>
+          <select id="inquiry-type">
             <option>Turnkey Installation (Hydrants/Sprinklers)</option>
             <option>Comprehensive AMC / Maintenance</option>
             <option>Statutory Fire Safety Audit</option>
@@ -209,7 +209,7 @@
         </div>
       </div>
       
-      <div class="form-group"><label>Technical Details &amp; Scope of Work</label><textarea placeholder="Please describe your facility type (e.g., Chemical Plant, IT Park), approximate square footage, existing system condition, and specific engineering requirements..." style="min-height: 120px;"></textarea></div>
+      <div class="form-group"><label for="scope">Technical Details &amp; Scope of Work</label><textarea id="scope" placeholder="Please describe your facility type (e.g., Chemical Plant, IT Park), approximate square footage, existing system condition, and specific engineering requirements..." style="min-height: 120px;"></textarea></div>
       
       <button class="form-submit" style="width: 100%; font-size: 16px; padding: 16px; margin-top: 16px;">Transmit Inquiry to Engineering Team</button>
       <div class="form-success" id="formSuccess">Thank you. Your message has been securely transmitted. Our engineering dispatch will contact you shortly.</div>

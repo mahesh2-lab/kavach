@@ -153,12 +153,12 @@
       <h3>Book Your Assessment</h3>
       <p style="font-size: 13px; color: var(--ash); margin-bottom: 24px;">Provide your facility details to schedule an inspection date.</p>
       <div class="form-row">
-        <div class="form-group"><label>Contact Person *</label><input type="text" placeholder="Full Name"></div>
-        <div class="form-group"><label>Mobile Number *</label><input type="tel" placeholder="+91"></div>
+        <div class="form-group"><label for="insp-contact">Contact Person *</label><input id="insp-contact" type="text" placeholder="Full Name"></div>
+        <div class="form-group"><label for="insp-phone">Mobile Number *</label><input id="insp-phone" type="tel" placeholder="+91"></div>
       </div>
-      <div class="form-group"><label>Company / Facility Name *</label><input type="text" placeholder="Organization Name"></div>
-      <div class="form-group"><label>Facility Type</label>
-        <select>
+      <div class="form-group"><label for="insp-company">Company / Facility Name *</label><input id="insp-company" type="text" placeholder="Organization Name"></div>
+      <div class="form-group"><label for="insp-type">Facility Type</label>
+        <select id="insp-type">
           <option>Manufacturing Plant / Factory</option>
           <option>Warehouse / Logistics Center</option>
           <option>Commercial Office Building</option>
@@ -168,10 +168,10 @@
         </select>
       </div>
       <div class="form-row">
-        <div class="form-group"><label>Approx. Area (Sq.Ft)</label><input type="text" placeholder="e.g. 50,000"></div>
-        <div class="form-group"><label>Preferred Date</label><input type="date"></div>
+        <div class="form-group"><label for="insp-area">Approx. Area (Sq.Ft)</label><input id="insp-area" type="text" placeholder="e.g. 50,000"></div>
+        <div class="form-group"><label for="insp-date">Preferred Date</label><input id="insp-date" type="date"></div>
       </div>
-      <div class="form-group"><label>Site Address &amp; Specific Concerns</label><textarea placeholder="Please provide the full address and any specific concerns you have regarding your current fire safety setup..."></textarea></div>
+      <div class="form-group"><label for="insp-address">Site Address &amp; Specific Concerns</label><textarea id="insp-address" placeholder="Please provide the full address and any specific concerns you have regarding your current fire safety setup..."></textarea></div>
       <button class="form-submit">Confirm Booking Request</button>
     </div>
   </div>
